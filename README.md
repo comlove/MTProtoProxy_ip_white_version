@@ -1,34 +1,19 @@
-# Async MTProto Proxy #
+# MTProto Proxy IP白名单版 #
 
-Fast and simple to setup MTProto proxy written in Python.
+用 Python 编写的快速简便的 MTProto 代理设置。
 
-## Starting Up ##
+## 启动 ##
     
-1. `git clone -b stable https://github.com/alexbers/mtprotoproxy.git; cd mtprotoproxy`
-2. *(optional, recommended)* edit *config.py*, set **PORT**, **USERS** and **AD_TAG**
-3. `docker-compose up -d` (or just `python3 mtprotoproxy.py` if you don't like Docker)
-4. *(optional, get a link to share the proxy)* `docker-compose logs`
+1. `前往 https://github.com/comlove/MTProtoProxy_ip_white_version 下载完整代码包`
+2. *选填操作* 编辑 *config.py*, 设置 **PORT**, **USERS** 和 **AD_TAG**
+3. `docker-compose up -d` (或者 `python3 mtprotoproxy.py`)
+4. *(（可选）获取用于共享代理的链接)* `docker-compose logs`
 
-![Demo](https://alexbers.com/mtprotoproxy/install_demo_v2.gif)
 
-## Channel Advertising ##
+## 频道广告 ##
 
-To advertise a channel get a tag from **@MTProxybot** and put it to *config.py*.
+要宣传频道，请从 **@MTProxybot** 获取标签并将其放入 *config.py*.
 
-## Performance ##
+## 性能表现 ##
 
-The proxy performance should be enough to comfortably serve about 4 000 simultaneous users on
-the VDS instance with 1 CPU core and 1024MB RAM.
-
-## More Instructions ##
-
-- [Running without Docker](https://github.com/alexbers/mtprotoproxy/wiki/Running-Without-Docker)
-- [Optimization and fine tuning](https://github.com/alexbers/mtprotoproxy/wiki/Optimization-and-Fine-Tuning)
-
-## Advanced Usage ##
-
-The proxy can be launched:
-- with a custom config: `python3 mtprotoproxy.py [configfile]`
-- several times, clients will be automaticaly balanced between instances
-- with uvloop module to get an extra speed boost
-- with runtime statistics exported to [Prometheus](https://prometheus.io/)
+代理服务器的性能应该足以轻松满足在配备 1 个 CPU 核心和 1024MB 内存的 VDS 实例上约 4000 个并发用户的需求。
